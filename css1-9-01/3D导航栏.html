@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 800px;
+				height: 60px;
+				border: 1px solid red;
+				margin: 50px auto;
+			}
+			.box ul{
+				list-style: none;
+			}
+			.box ul li{
+				width:130px ;
+				height: 60px;
+				float: left;
+				/*background-color: yellowgreen;*/
+				margin: 0 5px;
+				
+			}
+			.menu{
+				width: 130px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				position: relative;
+				transition: all 1s;
+				transform-style: preserve-3d;
+			}
+			.menu span{
+				width: 130px;
+				height: 60px;
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.menu span.chinese{
+				background-color: limegreen;
+				z-index: 1;
+				transform: translateZ(30px);
+			}
+			.menu span.english{
+				background-color: hotpink;
+				transform: rotateX(-90deg) translateZ(30px);
+			}
+			.box ul li:hover .menu{
+				transform:rotateX(90deg) ;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li>
+					<div class="menu">
+						<span class="chinese">导航菜单</span>
+						<span class="english">daohangcaidan</span>
+						
+					</div>
+				</li>
+				<li>
+					<div class="menu">
+						<span class="chinese">导航菜单</span>
+						<span class="english">daohangcaidan</span>
+						
+					</div>
+				</li>
+				<li>
+					<div class="menu">
+						<span class="chinese">导航菜单</span>
+						<span class="english">daohangcaidan</span>
+						
+					</div>
+				</li>
+				<li>
+					<div class="menu">
+						<span class="chinese">导航菜单</span>
+						<span class="english">daohangcaidan</span>
+						
+					</div>
+				</li>
+				<li>
+					<div class="menu">
+						<span class="chinese">导航菜单</span>
+						<span class="english">daohangcaidan</span>
+						
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

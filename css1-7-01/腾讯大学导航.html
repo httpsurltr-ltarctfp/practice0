@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			ul{
+				width:800px ;
+				height:100px ;
+				border: 2px solid red;
+				margin: 20px auto;
+			}
+			ul li{
+				list-style: none;
+				height:98px ;
+				background-image: url(img/nav.png);
+				background-repeat: no-repeat;
+				float: left;								
+				margin-left: 10px;
+			}
+			ul li:hover{
+				background-image: url(img/nav-on.png);
+			}
+			ul li:nth-child(1){
+				width: 100px;
+			}
+			ul li:nth-child(2){
+				width:112px ;
+				background-position-x: -100px;
+			}
+			ul li:nth-child(3){
+				width:135px ;
+				background-position-x: -230px;
+			}
+			ul li:nth-child(4){
+				width:120px ;
+				background-position-x: -368px;
+			}
+			ul li:nth-child(5){
+				width:112px ;
+				background-position-x: -488px;
+			}
+			ul li:nth-child(6){
+				width:112px ;
+				background-position-x: -612px;
+			}
+			ul li a{
+				display: block;
+				height:80px ;
+			}
+			.box{
+				width: 100%;
+				height: 680px;
+				background-image: url(img/bg.jpg);
+				background-repeat: no-repeat;
+				background-position: center; top;/*x轴和y轴的对应坐标，使页面以中心点进行缩放/
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<a href="#" title="首页"></a>
+			</li>
+			<li><a href="#" title="微信学院"></a></li>
+			<li><a href="#" title="开放平台学院"></a></li>
+			<li><a href="#" title="互联网平台"></a></li>
+			<li><a href="#" title="营销学院"></a></li>
+			<li><a href="#" title="游戏学院"></a></li>						
+		</ul>
+		<div class="box">
+			
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding:0;
+				margin: 0;
+			}
+			.box{
+				width:700px;
+				height:500px;
+				margin: 100px auto;
+				border-top:2px solid #333 ;
+				/*border: 1px solid red;*/				
+			}
+			.box1 span{
+				width: 232px;
+				/*height: 50px;*/
+				float: left;
+				line-height: 50px;
+				text-align: center;
+				font-size: 30px;
+				border-left: 1px solid gray;
+				border-bottom: 1px solid gray;
+			}
+			.box1 span a{
+				text-decoration: none;
+				color: black;
+			}
+			.box1 span a:hover{
+				color: blue;
+				text-decoration: underline;
+			}
+			.box1 span:nth-child(3){
+				border-right:1px solid gray ;
+			}	
+			.box1 span.current{
+				background-color: white;
+				border-bottom-color: white;
+				font-weight: bold;
+			}
+						
+			.box-photo div{
+				width:700px;
+				height:500px ;
+				display: none;
+			}/*/定义div没有理解*/
+			.box-photo div img{
+			    width:700px;
+				height:450px ;	
+			}
+			.box-photo div.current{
+				display:block;
+			}/*读取方式不理解*/
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1" id="box_box1">
+				<span class="current">
+					<a href="https://www.baidu.com/">美食</a>
+				</span>
+				<span>
+					<a href="https://www.baidu.com/">旅游</a>
+				</span>
+				<span>
+					<a href="https://www.baidu.com/">时尚</a>
+				</span>
+			</div>
+			<div class="box-photo" id="box_picture">
+			    <div class="current">
+			    	<img src="img/05.jpg" />
+			    </div>
+			    <div>
+			    	<img src="img/04.jpg" />
+			    </div>
+			    <div>
+			    	<img src="img/01.jpg" />
+			    </div>
+			</div>									
+		</div>
+		<script type="text/javascript">
+			var b1Span=document.getElementById("box-box1").getElementsByTagName("span");
+			var tuDivs=document.getElementById("box_picture").getElementsByTagName("div");
+			for (var i=0;i<b1Span.length;i++){
+				(function(m){
+					b1Span[m].onmouseover=function(){
+						for (var j=0;j<tuDivs.length;j++) {
+							tuDivs[j].className="";
+						}
+						tuDivs[m].className="current";
+						//让所有的hdspan都没有current类
+						b1Span[0].className='';
+						b1Span[1].className='';
+						b1Span[2].className='';
+						//让当前所指向的span类名为current
+						this.className+=" current";
+					}
+				})(i)
+			}
+		</script>
+		
+	</body>
+</html>

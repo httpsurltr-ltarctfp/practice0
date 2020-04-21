@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.item{
+			width: 100%;
+			height: 100px;
+		}	
+		.item ul{
+			width: 1000px;
+			height: 100px;
+			border: 1px solid darkgray;
+			margin: auto;
+		}	
+		.item ul li{
+			list-style: none;
+			/*width:150px ;*/
+			height: 85px;
+			background-image: url(img/xb.png);
+			background-repeat: no-repeat;	
+			margin-top: 5px;
+		}
+		ul li:nth-child(1){
+			width:150px ;
+			background-position-x: -287px;
+			background-position-y: -60px;
+			float: left;
+			margin-left:50px ;
+		}
+		ul li:nth-child(2){
+			width:300px ;
+			background-position-x: 8px;
+			background-position-y: -5px;
+			float: right;
+			margin-right: 50px;	
+		}
+		.box{
+			width: 100%;
+			height: 600px;
+			background-image: url(img/bg.jpg);
+			background-repeat: no-repeat;
+			background-position: center top;
+			left: 0;
+		}
+		.page{
+			width: 360px;
+			height: 430px;
+			background-color: white;
+			position: absolute;
+			right: 130px;
+			top:180px;
+			
+		}
+		.page ul{
+			width:360px ;
+			height:50px;
+			border-bottom: 1px solid gainsboro;
+			
+		}
+		.page ul li{
+			width: 100px;
+			height: 50px;
+			font-size:18px;
+			font-weight: bold;
+			text-align: center;
+			line-height:50px ;
+			list-style: none;
+			float: left;
+			margin-left: 50px;
+		}
+		.page ul li:nth-child(1){
+			color: dimgray;				
+		}
+		.page ul li:nth-child(2){
+			color: deeppink;	
+		}
+		.form{
+			width: 260px;
+			height:130px ;
+			margin: auto;
+			margin-top: 25px;
+		}
+		.form p{
+			width: 260px;
+			height:40px ;
+			border: 1px solid darkgray;
+			margin: auto;
+			margin-top: 30px;
+			
+		}
+		.form p:nth-child(1)::before{
+			content: '';
+			display: block;
+			width: 24px;
+			height: 24px;
+			background-image:url(img/xb.png);
+			background-repeat: no-repeat;
+			background-position: -400px -205px;
+			/*border: 1px red solid;*/
+			float: left;
+			margin-top: 8px;
+			margin-left: 8px;
+			
+		}
+		.form p:nth-child(2)::before{
+			content: '';
+			display: block;
+			width: 24px;
+			height: 24px;
+			background-image:url(img/xb.png);
+			background-repeat: no-repeat;
+			background-position: -517px -160px;
+			/*border: 1px red solid;*/
+			float: left;
+			margin-top: 8px;
+			margin-left: 8px;
+		}
+		.form input{
+			width: 210px;
+			height: 38px;
+			margin-top:0;		
+			margin-left: 5px;
+			text-indent: 1em;
+			float: left;
+			border: none;
+		    outline: none;
+		} 
+		.form input::-webkit-input-placeholder{
+			color: hotpink;
+		}
+		
+		
+		.font{
+			width: 260px;
+			height: 38px;
+			margin: 0 auto;
+			/*background-color: red;*/
+			margin-top: 5px;
+		}
+		.font p{
+			text-align: center;
+			line-height: 38px;
+			/*float: left;*/
+			margin-left: 1px;
+			font-size: 14px;
+		}
+		.font p:nth-child(1){
+			float: left;
+		}
+		.font p:nth-child(2){
+			float: right;
+		}
+		.denglu{
+			width: 260px;
+			height: 38px;
+			background-color: deeppink;
+			border-radius: 5px;
+			margin: auto;
+			
+		}
+		.denglu p{
+			font-size: 18px;
+			color: white;
+			text-align: center;
+			line-height: 38px;
+		}
+		fieldset{
+			border: none;
+			border-top: 1px solid #B5C0CB;
+			margin-top: 25px;
+		}
+		
+		fieldset p{
+			width:45px ;
+			height: 45px;
+			background-image: url(img/xb.png);
+			background-repeat: no-repeat;
+			background-position: -398px -160px
+		}
+		.bottom{
+			width:260px ;
+			height: 40px;
+			margin: auto;
+			margin-top:15px;
+		}
+		.bottom ul{
+			width:260px ;
+			height: 36px;
+			margin-left: 0;
+		}
+		.bottom ul li{
+			width:49px ;
+			font-size: 12px;
+			font-weight: lighter;			
+			float: left;
+			margin-left: 0;			
+		}
+		.bottom ul li:nth-child(1){
+			color: darkgray;
+		}
+		.bottom ul li:nth-child(2){
+			color: black;
+		}
+		.bottom ul li:nth-child(4){
+			color: darkgray;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="item">
+			<ul>
+			    <li></li>
+			    <li></li>				
+		    </ul>
+		</div>
+		
+		<div class="box">
+			<div class="page">
+				<ul>
+					<li>扫码登录</li>
+					<li>账户登录</li>					
+				</ul>				
+				<form class="form">
+					<p><input type="text" name="" id="" value="" placeholder="用户名/邮箱/电话"/></p>
+					<p><input type="password" name="" id="" value="" placeholder="密码"/></p>					
+				</form>
+				<div class="font">
+					<p>短信验证登录</p>
+					<p>忘记密码</p>
+				</div>
+				<div class="denglu">
+					<p>登录</p>	
+				</div>
+				<fieldset id="">
+				    <legend align="center">
+					    <p></p>					   
+				    </legend>
+			    </fieldset>
+				<div class=bottom>
+					<ul>
+						<li>新浪微博</li>
+						<li>QQ</li>
+						<li style="margin-left: -43px;">支付宝</li>
+						<li>更多</li>
+						<li style="margin-left: 8px;">免费注册</li>		
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
